@@ -4,6 +4,7 @@ import MainLayout from '../layouts/MainLayout';
 import Loader from '../components/Loader';
 
 const Home = lazy(() => import('../pages/Home'));
+const ContactPage = lazy(() => import('../pages/ContactPage'));
 
 export default function AppRoutes() {
   return (
@@ -14,6 +15,14 @@ export default function AppRoutes() {
           element={
             <MainLayout>
               <Home />
+            </MainLayout>
+          }
+        />
+        <Route
+          path="/contact"
+          element={
+            <MainLayout>
+              <ContactPage />
             </MainLayout>
           }
         />
